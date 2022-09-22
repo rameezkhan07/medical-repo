@@ -1,0 +1,32 @@
+<h2>Doctors Avalable</h2>
+<div class="container">
+    <div class="mb-3">
+        <label >Select Doctor</label>
+        <select class="form-select" aria-label="Default select example" name="doctor" (change)="changeDoc()" [(ngModel)]="selecteddoctor">
+            <option value="a" *ngFor="let doctor of doctors" [value]="doctor.docName">{{doctor.docName}}
+            </option>
+        </select>
+
+    </div>
+    <div>
+        <table class="table mt-3">
+            <thead>
+                <tr>
+                    <th scope="col">Doctor Name</th>
+                    <th scope="col">Doctor Age</th>
+                    <th scope="col">Specialization</th>
+                    <th scope="col">NUmber of Patients attended</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{selecteddoctor}}</td>
+                    <td>{{selecteddoctorage}}</td>
+                    <td>{{selecteddoctorspecialization}}</td>
+                    <td>{{patient.length}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>

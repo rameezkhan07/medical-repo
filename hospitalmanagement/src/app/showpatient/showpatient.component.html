@@ -1,0 +1,29 @@
+<h2>Search for Patient</h2>
+<div class="container">
+    <div class="mb-8">
+        <label  class="form-label">Enter Patient Id</label>
+        <input [(ngModel)]="patid" type="text" class="form-control">
+    </div>
+    <button (click)="getData()" type="button" class="btn btn-outline-info" style="margin-top: 10px;">Info</button>
+    <div>
+        <p> Patient Name : <span>{{name}}</span></p>
+        <table class="table mt-3">
+            <thead>
+              <tr>
+                <th scope="col">Visited doctor</th>
+                <th scope="col">Date of visit</th>
+                <th scope="col">prescription</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor ="let i of patient">
+                <td>{{i["docName"]}}</td>
+                <td>{{i["date"]}}</td>
+                <td>{{i["prescription"]}}</td>
+              </tr>
+            </tbody>
+          </table> 
+    
+    </div>
+</div>
+
