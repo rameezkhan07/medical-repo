@@ -1,0 +1,6 @@
+com\mindtree\orchard\doctor\DoctorApplication.class
+com\mindtree\orchard\doctorcontroller\DoctorController.class
+com\mindtree\orchard\doctorinterface\DoctorInterface.class
+com\mindtree\orchard\doctorrepository\DoctorRepository.class
+com\mindtree\orchard\doctorentiy\Doctor.class
+com\mindtree\orchard\doctorservice\DoctorImplimentation.class

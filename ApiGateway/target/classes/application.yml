@@ -1,0 +1,22 @@
+eureka:
+  client:
+    service-url:
+      defaultzone: http://localhost:8761
+  instance:
+    hostname: localhost
+    
+    
+    
+spring:
+  cloud:
+    gateway:
+       routes:
+       - id: DOCTOR
+         uri: lb://DOCTOR
+         predicates:
+         - Path=/doctor/**
+       - id: PATIENT
+         uri: lb://PATIENT
+         predicates:
+         - Path=/patient/**
+    
